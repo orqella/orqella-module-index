@@ -10,6 +10,10 @@ The index is a single static JSON file:
 index.json
 ```
 
+Only modules whose git repository or release archive is publicly installable
+belong here. Private first-party modules stay out of the public index until they
+are published.
+
 Published URL (default in Orqella):
 
 ```text
