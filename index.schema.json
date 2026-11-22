@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/orqella/orqella-module-index/main/index.schema.json",
+  "title": "Orqella module index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "modules"],
+  "properties": {
+    "schema": { "const": 1 },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "modules": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/module" }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{64}$"
+    },
+    "platform": {
+      "type": "string",
+      "pattern": "^(linux|macos|windows)-[a-zA-Z0-9_]+$"
+    },
+    "platforms": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/platform" },
+      "uniqueItems": true
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^(https://|http://(127\\.0\\.0\\.1|localhost)([:/]|$))"
+    },
+    "module": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "publisher", "versions"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "publisher": { "$ref": "#/$defs/publisher" },
+        "official": { "type": "boolean" },
+        "homepage": { "$ref": "#/$defs/url" },
+        "license": { "type": "string" },
+        "node_scope": {
+          "type": "string",
+          "enum": ["node", "aggregate", "hub"]
+        },
+        "permissions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "versions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/version" }
+        }
+      }
+    },
+    "publisher": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "$ref": "#/$defs/url" }
+      }
+    },
+    "version": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "api_version", "distributions"],
+      "properties": {
+        "version": { "type": "string", "minLength": 1 },
+        "api_version": { "type": "string", "minLength": 1 },
+        "released_at": { "type": "string" },
+        "notes_url": { "$ref": "#/$defs/url" },
+        "distributions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/distribution" }
+        }
+      }
+    },
+    "distribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "tree_sha256"],
+      "properties": {
+        "platforms": { "$ref": "#/$defs/platforms" },
+        "source": {
+          "oneOf": [
+            { "$ref": "#/$defs/gitSource" },
+            { "$ref": "#/$defs/archiveSource" }
+          ]
+        },
+        "tree_sha256": { "$ref": "#/$defs/sha256" },
+        "backend": { "$ref": "#/$defs/backend" }
+      }
+    },
+    "gitSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "url", "commit"],
+      "properties": {
+        "type": { "const": "git" },
+        "url": { "$ref": "#/$defs/url" },
+        "ref": { "type": "string" },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{40,64}$"
+        }
+      }
+    },
+    "archiveSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "url", "format", "sha256"],
+      "properties": {
+        "type": { "const": "archive" },
+        "url": { "$ref": "#/$defs/url" },
+        "format": { "type": "string", "enum": ["zip", "tar.gz"] },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "size": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "backend": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": { "type": "string", "enum": ["none", "sidecar"] },
+        "compiled": { "type": "boolean" },
+        "platforms": { "$ref": "#/$defs/platforms" }
+      }
+    }
+  }
+}

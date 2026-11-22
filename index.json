@@ -1,0 +1,275 @@
+{
+  "schema": 1,
+  "updated_at": "2026-11-22T19:47:48Z",
+  "modules": [
+    {
+      "id": "home-assistant",
+      "name": "Home Assistant",
+      "description": "Open your Home Assistant dashboard and connect Voice Assistant to Assist.",
+      "category": "Automation",
+      "tags": [
+        "home",
+        "automation"
+      ],
+      "publisher": {
+        "name": "Orqella",
+        "url": "https://orqella.io"
+      },
+      "official": true,
+      "homepage": "https://github.com/orqella/orqella-home-assistant",
+      "license": "MIT",
+      "node_scope": "node",
+      "permissions": [
+        "backend",
+        "node.proxy:homeassistant",
+        "app.open"
+      ],
+      "versions": [
+        {
+          "version": "0.1.7",
+          "api_version": "1",
+          "released_at": "2026-11-17",
+          "notes_url": "https://github.com/orqella/orqella-home-assistant/commit/fc7db9ee8a705f086fa127ebca5f2fa861f088d9",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-home-assistant",
+                "ref": "main",
+                "commit": "fc7db9ee8a705f086fa127ebca5f2fa861f088d9"
+              },
+              "tree_sha256": "b64e763ce6462febe4542a04478b6f2faa18eeb62b45902887165c1592267d0b",
+              "platforms": [
+                "linux-aarch64",
+                "linux-x86_64",
+                "macos-aarch64",
+                "macos-x86_64",
+                "windows-aarch64",
+                "windows-x86_64"
+              ],
+              "backend": {
+                "kind": "sidecar",
+                "compiled": false,
+                "platforms": [
+                  "linux-aarch64",
+                  "linux-x86_64",
+                  "macos-aarch64",
+                  "macos-x86_64",
+                  "windows-aarch64",
+                  "windows-x86_64"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "system",
+      "name": "System",
+      "description": "Live host metrics, the Network Universe, and system services.",
+      "category": "System",
+      "tags": [
+        "metrics",
+        "network"
+      ],
+      "publisher": {
+        "name": "Orqella",
+        "url": "https://orqella.io"
+      },
+      "official": true,
+      "homepage": "https://github.com/orqella/orqella-system",
+      "license": "MIT",
+      "node_scope": "node",
+      "permissions": [
+        "node.metrics",
+        "nodes.read",
+        "backend",
+        "agent"
+      ],
+      "versions": [
+        {
+          "version": "0.3.6",
+          "api_version": "1",
+          "released_at": "2026-11-17",
+          "notes_url": "https://github.com/orqella/orqella-system/commit/bcbad2f4387026cb576ed91a8344fe018dc54157",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-system",
+                "ref": "main",
+                "commit": "bcbad2f4387026cb576ed91a8344fe018dc54157"
+              },
+              "tree_sha256": "3e39e506ec729598d08a1dbeca3e03ca29c4ddd8834fd90805c2420975be8d12",
+              "platforms": [
+                "linux-aarch64",
+                "linux-x86_64",
+                "macos-aarch64",
+                "macos-x86_64",
+                "windows-aarch64",
+                "windows-x86_64"
+              ],
+              "backend": {
+                "kind": "sidecar",
+                "compiled": false,
+                "platforms": [
+                  "linux-aarch64",
+                  "linux-x86_64",
+                  "macos-aarch64",
+                  "macos-x86_64",
+                  "windows-aarch64",
+                  "windows-x86_64"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal",
+      "description": "Persistent local shells with a mobile-first tabbed terminal.",
+      "category": "Developer tools",
+      "tags": [
+        "terminal",
+        "shell"
+      ],
+      "publisher": {
+        "name": "Orqella",
+        "url": "https://orqella.io"
+      },
+      "official": true,
+      "homepage": "https://github.com/orqella/orqella-terminal",
+      "license": "MIT",
+      "node_scope": "node",
+      "permissions": [
+        "backend",
+        "storage"
+      ],
+      "versions": [
+        {
+          "version": "0.3.4",
+          "api_version": "1",
+          "released_at": "2026-11-16",
+          "notes_url": "https://github.com/orqella/orqella-terminal/commit/7c3755aa460b7daee60c38907ccd7635a95e2a50",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-terminal",
+                "ref": "main",
+                "commit": "7c3755aa460b7daee60c38907ccd7635a95e2a50"
+              },
+              "tree_sha256": "b44c1ba585bd35c36afeca3422635c48d51e302c96ce7cc54b4f291d237e9756",
+              "platforms": [
+                "linux-aarch64",
+                "linux-x86_64",
+                "macos-aarch64",
+                "macos-x86_64",
+                "windows-aarch64",
+                "windows-x86_64"
+              ],
+              "backend": {
+                "kind": "sidecar",
+                "compiled": false,
+                "platforms": [
+                  "linux-aarch64",
+                  "linux-x86_64",
+                  "macos-aarch64",
+                  "macos-x86_64",
+                  "windows-aarch64",
+                  "windows-x86_64"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vm-lab",
+      "name": "VM Lab",
+      "description": "Create and control local Linux, Windows, and macOS VMs with a browser console.",
+      "category": "System",
+      "tags": [
+        "virtualization",
+        "qemu"
+      ],
+      "publisher": {
+        "name": "Orqella",
+        "url": "https://orqella.io"
+      },
+      "official": true,
+      "homepage": "https://github.com/orqella/orqella-vm-lab",
+      "license": "MIT",
+      "node_scope": "node",
+      "permissions": [
+        "backend",
+        "agent"
+      ],
+      "versions": [
+        {
+          "version": "0.1.11",
+          "api_version": "1",
+          "released_at": "2026-11-20",
+          "notes_url": "https://github.com/orqella/orqella-vm-lab/commit/95dbec73ad4c48b69cf35855b613bcb2af6293f1",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-vm-lab",
+                "ref": "main",
+                "commit": "95dbec73ad4c48b69cf35855b613bcb2af6293f1"
+              },
+              "tree_sha256": "a9fea5627e2abae585ba5807db6703cda0680c9138d6210ee4de968de6d13cc5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "voice-assistant",
+      "name": "Voice Assistant",
+      "description": "Hold-to-talk voice commands with a managed route catalog.",
+      "category": "Automation",
+      "tags": [
+        "voice",
+        "audio"
+      ],
+      "publisher": {
+        "name": "Orqella",
+        "url": "https://orqella.io"
+      },
+      "official": true,
+      "homepage": "https://github.com/orqella/orqella-voice-assistant",
+      "license": "MIT",
+      "node_scope": "node",
+      "permissions": [
+        "backend",
+        "agent",
+        "media.record"
+      ],
+      "versions": [
+        {
+          "version": "0.1.5",
+          "api_version": "1",
+          "released_at": "2026-11-17",
+          "notes_url": "https://github.com/orqella/orqella-voice-assistant/commit/d0a8739692091b7a701d4977bac97146f6398168",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-voice-assistant",
+                "ref": "main",
+                "commit": "d0a8739692091b7a701d4977bac97146f6398168"
+              },
+              "tree_sha256": "c5c6fc8207b99d8430629d1e8ba22031fea499012f31f1d6ebd768604d8c82d7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
