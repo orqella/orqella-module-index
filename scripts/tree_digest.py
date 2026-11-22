@@ -100,7 +100,10 @@ def archive_ref(path: Path, ref: str, destination: Path) -> Path:
     tree = destination / "tree"
     tree.mkdir()
     with tarfile.open(archive) as tar:
-        tar.extractall(tree, filter="data")
+        try:
+            tar.extractall(tree, filter="data")
+        except TypeError:  # Python < 3.12
+            tar.extractall(tree)
     return tree
 
 
