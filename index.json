@@ -1,7 +1,51 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-22T19:47:48Z",
+  "updated_at": "2026-11-22T20:02:04Z",
   "modules": [
+    {
+      "id": "agent-harness",
+      "name": "Agent Harness",
+      "description": "A configurable workspace for coding-agent harnesses such as OpenCode, Claude Code, Codex, and Gemini.",
+      "category": "Developer tools",
+      "tags": [
+        "agents",
+        "acp",
+        "workspace"
+      ],
+      "publisher": {
+        "name": "Orqella",
+        "url": "https://orqella.io"
+      },
+      "official": true,
+      "homepage": "https://github.com/orqella/orqella-agent-harness",
+      "license": "MIT",
+      "node_scope": "node",
+      "permissions": [
+        "backend",
+        "storage",
+        "app.open",
+        "fs.pick"
+      ],
+      "versions": [
+        {
+          "version": "0.1.0",
+          "api_version": "1",
+          "released_at": "2026-11-22",
+          "notes_url": "https://github.com/orqella/orqella-agent-harness/commit/076fb1251edafffb911aa090b431d97543271f16",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-agent-harness",
+                "ref": "main",
+                "commit": "076fb1251edafffb911aa090b431d97543271f16"
+              },
+              "tree_sha256": "dcffb053eeeb08fa4330424527e755fb357ff7ec067e7fdf4a9e7c5e6d2e4660"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "home-assistant",
       "name": "Home Assistant",
