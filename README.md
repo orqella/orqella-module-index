@@ -212,6 +212,13 @@ integrity check, so protect the default branch and review changes to
 `index.json` like code. Modules are still installed as ordinary module
 repositories and remain subject to permission review.
 
+The Orqella installer runs `orqella setup`, which installs the official
+`agent-harness` entry and grants its declared first-party access. That
+auto-grant is limited to the exact official index URL, `official = true`, and
+the module's known permission set (`backend`, `storage`, `app.open`, `fs.pick`).
+A custom `index_url` never auto-grants. All other modules, and any permission
+added later, still start with sensitive grants pending.
+
 The daemon can point at another index with `[modules] index_url` in
 `config.toml`, for private mirrors or testing.
 
