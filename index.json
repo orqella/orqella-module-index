@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-22T20:02:04Z",
+  "updated_at": "2026-11-23T21:47:16Z",
   "modules": [
     {
       "id": "agent-harness",
@@ -310,6 +310,66 @@
                 "commit": "d0a8739692091b7a701d4977bac97146f6398168"
               },
               "tree_sha256": "c5c6fc8207b99d8430629d1e8ba22031fea499012f31f1d6ebd768604d8c82d7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workspace-picker",
+      "name": "Workspace picker",
+      "description": "See and switch the open workspaces on the selected machine.",
+      "category": "Desktop",
+      "tags": [
+        "workspaces",
+        "desktop"
+      ],
+      "publisher": {
+        "name": "Orqella",
+        "url": "https://orqella.io"
+      },
+      "official": true,
+      "homepage": "https://github.com/orqella/orqella-workspace-picker",
+      "license": "MIT",
+      "node_scope": "node",
+      "permissions": [
+        "backend"
+      ],
+      "versions": [
+        {
+          "version": "0.2.4",
+          "api_version": "1",
+          "released_at": "2026-11-23",
+          "notes_url": "https://github.com/orqella/orqella-workspace-picker/releases/tag/v0.2.4",
+          "distributions": [
+            {
+              "platforms": [
+                "linux-x86_64",
+                "linux-aarch64",
+                "macos-x86_64",
+                "macos-aarch64",
+                "windows-x86_64",
+                "windows-aarch64"
+              ],
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-workspace-picker",
+                "ref": "v0.2.4",
+                "commit": "1f1619db5e75d6a379cdf697684e348c5108c885"
+              },
+              "tree_sha256": "225630dd9ff662b21d0a9ae4cc60aba0688b86faadeb262378189d0649616d01",
+              "backend": {
+                "kind": "sidecar",
+                "compiled": false,
+                "platforms": [
+                  "linux-x86_64",
+                  "linux-aarch64",
+                  "macos-x86_64",
+                  "macos-aarch64",
+                  "windows-x86_64",
+                  "windows-aarch64"
+                ]
+              }
             }
           ]
         }
