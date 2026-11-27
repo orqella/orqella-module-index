@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-24T21:14:51Z",
+  "updated_at": "2026-11-27T14:53:56Z",
   "modules": [
     {
       "id": "agent-harness",
@@ -27,6 +27,23 @@
         "fs.pick"
       ],
       "versions": [
+        {
+          "version": "0.1.3",
+          "api_version": "1",
+          "released_at": "2026-11-27",
+          "notes_url": "https://github.com/orqella/orqella-agent-harness/releases/tag/v0.1.3",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-agent-harness",
+                "ref": "v0.1.3",
+                "commit": "1fdcba995fe6fb648080b275cd68dc2f7d72f5a9"
+              },
+              "tree_sha256": "dc85439403ed4cfb1565ddff15801c185eade53567b8306df7607b87c6a99af0"
+            }
+          ]
+        },
         {
           "version": "0.1.2",
           "api_version": "1",
@@ -83,9 +100,47 @@
       "permissions": [
         "backend",
         "node.proxy:homeassistant",
-        "app.open"
+        "app.open",
+        "node.proxy.manage:homeassistant"
       ],
       "versions": [
+        {
+          "version": "0.2.0",
+          "api_version": "1",
+          "released_at": "2026-11-27",
+          "notes_url": "https://github.com/orqella/orqella-home-assistant/releases/tag/v0.2.0",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-home-assistant",
+                "ref": "v0.2.0",
+                "commit": "e53fdfec1c9785510d8c5c1f23f408907c96ffe3"
+              },
+              "tree_sha256": "e50eadac99e385beebd4e0e3703aca5ab6c0e03a258a75af9c139d16ab4e8a5f",
+              "platforms": [
+                "linux-aarch64",
+                "linux-x86_64",
+                "macos-aarch64",
+                "macos-x86_64",
+                "windows-aarch64",
+                "windows-x86_64"
+              ],
+              "backend": {
+                "kind": "sidecar",
+                "compiled": false,
+                "platforms": [
+                  "linux-aarch64",
+                  "linux-x86_64",
+                  "macos-aarch64",
+                  "macos-x86_64",
+                  "windows-aarch64",
+                  "windows-x86_64"
+                ]
+              }
+            }
+          ]
+        },
         {
           "version": "0.1.7",
           "api_version": "1",
@@ -313,6 +368,23 @@
         "media.record"
       ],
       "versions": [
+        {
+          "version": "0.1.6",
+          "api_version": "1",
+          "released_at": "2026-11-27",
+          "notes_url": "https://github.com/orqella/orqella-voice-assistant/releases/tag/v0.1.6",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-voice-assistant",
+                "ref": "v0.1.6",
+                "commit": "bccbd1a69afc889fad40b0bdd7f1a5a1d8dd6ed7"
+              },
+              "tree_sha256": "f2c2faee3de8fb730708d65c280af50ef92e32c2cfd8f4145b2f26e7ef807b06"
+            }
+          ]
+        },
         {
           "version": "0.1.5",
           "api_version": "1",
