@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-27T20:56:20Z",
+  "updated_at": "2026-11-27T21:21:00Z",
   "modules": [
     {
       "id": "agent-harness",
@@ -27,6 +27,23 @@
         "fs.pick"
       ],
       "versions": [
+        {
+          "version": "0.1.4",
+          "api_version": "1",
+          "released_at": "2026-11-27",
+          "notes_url": "https://github.com/orqella/orqella-agent-harness/releases/tag/v0.1.4",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/orqella-agent-harness",
+                "ref": "v0.1.4",
+                "commit": "433f255eb51b1fe5080863c5a25c1a1109976472"
+              },
+              "tree_sha256": "ed4dc0ab5b94140386a0f036e5ca324a1f67b4cb8a024abee35a8f7fb4638846"
+            }
+          ]
+        },
         {
           "version": "0.1.3",
           "api_version": "1",
