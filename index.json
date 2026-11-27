@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-27T14:53:56Z",
+  "updated_at": "2026-11-27T20:56:20Z",
   "modules": [
     {
       "id": "agent-harness",
@@ -75,6 +75,72 @@
                 "commit": "076fb1251edafffb911aa090b431d97543271f16"
               },
               "tree_sha256": "dcffb053eeeb08fa4330424527e755fb357ff7ec067e7fdf4a9e7c5e6d2e4660"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "files",
+      "name": "Files",
+      "description": "Browse, preview, and download files from this machine.",
+      "category": "Files",
+      "tags": [
+        "files",
+        "downloads",
+        "preview",
+        "markdown"
+      ],
+      "publisher": {
+        "name": "Orqella",
+        "url": "https://orqella.io"
+      },
+      "official": true,
+      "homepage": "https://github.com/orqella/files",
+      "license": "MIT",
+      "node_scope": "node",
+      "permissions": [
+        "backend",
+        "downloads",
+        "storage",
+        "fs.pick",
+        "node.metrics"
+      ],
+      "versions": [
+        {
+          "version": "0.2.0",
+          "api_version": "1",
+          "released_at": "2026-11-27",
+          "notes_url": "https://github.com/orqella/files/releases/tag/v0.2.0",
+          "distributions": [
+            {
+              "source": {
+                "type": "git",
+                "url": "https://github.com/orqella/files",
+                "ref": "v0.2.0",
+                "commit": "0a0367157448fc38650c26371de2bba4fb98169f"
+              },
+              "tree_sha256": "271b01e1c393a0169391d30c0eed8b182e433a6fe50938b1f5b89b80fa836bf5",
+              "platforms": [
+                "linux-aarch64",
+                "linux-x86_64",
+                "macos-aarch64",
+                "macos-x86_64",
+                "windows-aarch64",
+                "windows-x86_64"
+              ],
+              "backend": {
+                "kind": "sidecar",
+                "compiled": false,
+                "platforms": [
+                  "linux-aarch64",
+                  "linux-x86_64",
+                  "macos-aarch64",
+                  "macos-x86_64",
+                  "windows-aarch64",
+                  "windows-x86_64"
+                ]
+              }
             }
           ]
         }
